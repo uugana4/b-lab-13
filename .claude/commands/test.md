@@ -1,14 +1,14 @@
 # /test
 
-Generate or improve tests using testing-pyramid thinking.
+Testing pyramid mindset ашиглан test үүсгэх эсвэл сайжруулах.
 
 Checklist:
-- Cover main use cases first.
-- Add edge-case tests (empty input, invalid format, not found, duplicates).
-- Keep tests deterministic and isolated.
-- Validate both success and failure paths.
+- Эхлээд main use case-үүдийг cover хий.
+- Edge-case test нэм: empty input, invalid format, not found, duplicate.
+- Test-үүд deterministic, isolated байх ёстой.
+- Success болон failure path хоёуланг шалга.
 
 Output:
-- Test plan bullets.
-- Proposed/implemented tests by file.
-- Remaining coverage gaps.
+- Test plan bullet-ууд.
+- File тус бүрээр proposed/implemented test.
+- Үлдсэн coverage gap.

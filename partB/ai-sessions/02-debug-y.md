@@ -1,15 +1,15 @@
-# Session 02 - Debug and Edge Case Review
+# Session 02 - Debug ба edge case review
 
-## Objective
-Harden input validation and test failure paths.
+## Зорилго
+Input validation болон failure path-уудыг илүү найдвартай болгох.
 
-## AI Assistance
-- Highlighted potential inconsistencies around date format and empty title handling.
-- Suggested adding tests for invalid priorities and missing task IDs.
+## AI assistance
+- Date format болон empty title handling дээр inconsistency гарах боломжийг анхааруулсан.
+- Invalid priority болон байхгүй task ID дээр test нэмэхийг санал болгосон.
 
-## Human Verification
-- Added tests for invalid due date format and invalid priority.
-- Confirmed `KeyError` for missing IDs in `get_task` and `delete_task`.
+## Хүний verification
+- Invalid due date format болон invalid priority-д test нэмсэн.
+- `get_task`, `delete_task` дээр байхгүй ID ирэхэд `KeyError` гарахыг баталгаажуулсан.
 
-## Result
-- Error paths are now explicit and covered by tests.
+## Үр дүн
+- Error path-ууд тодорхой болж, test coverage-д орсон.

@@ -1,20 +1,20 @@
-# AI Planning Session Log (Summary)
+# AI Planning Session Log (товч)
 
-## Session 1 - Scope Definition
-- Goal: choose one assignment topic with >=3 concrete features.
-- Decision: Personal Task Tracker (CRUD, due date, priority, label, search/filter).
-- Human role: constrained scope to avoid over-engineering.
+## Session 1 - Scope тодорхойлох
+- Зорилго: 3-аас дээш concrete feature-тэй нэг assignment topic сонгох.
+- Шийдвэр: Personal Task Tracker (CRUD, due date, priority, label, search/filter).
+- Хүний оролцоо: over-engineering-ээс зайлсхийж scope-ийг хязгаарласан.
 
-## Session 2 - Stack Comparison
-- Compared Python, Node.js, Java stacks.
-- AI suggested pros/cons; human prioritized quick testing and low setup overhead.
-- Decision: Python standard library.
+## Session 2 - Stack харьцуулалт
+- Python, Node.js, Java stack-үүдийг харьцуулсан.
+- AI давуу/сул талыг санал болгосон; хүн quick testing болон бага setup overhead-ийг чухалчилсан.
+- Шийдвэр: Python standard library.
 
-## Session 3 - Architecture Planning
-- Drafted module responsibilities and data flow.
-- Added deterministic filter/sort behavior to reduce ambiguity.
-- Produced Mermaid architecture diagram and ADR-0001 structure.
+## Session 3 - Architecture planning
+- Module responsibility болон data flow-ийн draft гаргасан.
+- Хоёрдмол байдлыг бууруулахын тулд deterministic filter/sort behavior нэмсэн.
+- Mermaid architecture diagram болон ADR-0001 structure гаргасан.
 
-## Verification Notes
-- Every AI suggestion was reviewed before acceptance.
-- Plan documents were aligned to required assignment file names and pass criteria.
+## Verification notes
+- AI suggestion бүрийг шууд хүлээж аваагүй, эхлээд review хийсэн.
+- Plan documents-ийг assignment-ийн required filename болон pass criteria-тай тулгаж шалгасан.

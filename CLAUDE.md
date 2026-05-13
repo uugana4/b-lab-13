@@ -1,70 +1,70 @@
 # CLAUDE.md
 
-Project: F.CSM311 Lab 13 - Personal Task Tracker
+Төсөл: F.CSM311 Lab 13 - Personal Task Tracker
 
-## Purpose
-This file defines how AI assistants should collaborate in this repository with predictable quality, safety, and traceability.
+## Зорилго
+Энэ файл нь AI assistant энэ repository дээр хэрхэн тогтвортой, аюулгүй, шалгаж болохуйц байдлаар хамтран ажиллах дүрмийг тодорхойлно.
 
-## Build Commands
-- Run tests:
+## Build/Test командууд
+- Тест ажиллуулах:
   - `cd partB && python3 -m unittest discover -s tests -p "test_*.py" -v`
-- Run a quick module check:
+- Module хурдан шалгах:
   - `cd partB && python3 -m py_compile src/task_tracker.py`
-- Optional local usage:
+- Local demo ажиллуулах:
   - `cd partB && python3 src/task_tracker.py`
 
-## Repository Conventions
-- Keep the required assignment structure unchanged:
+## Repository-ийн дүрэм
+- Бие даалтын шаардсан бүтцийг өөрчлөхгүй:
   - `partA/`, `partB/`, `partC/`, `.claude/commands/`
-- Keep Part A as planning documents only (no production code).
-- Keep Part C as reflection and evidence only.
-- Place all implementation code in `partB/src/`.
-- Place all tests in `partB/tests/`.
-- Use clear English identifiers in source code.
-- Documentation can be Mongolian/English mixed for course readability.
+- Part A нь зөвхөн төлөвлөлтийн баримт бичиг байна, production code оруулахгүй.
+- Part C нь зөвхөн эргэцүүлэл ба нотолгооны материал байна.
+- Бүх хэрэгжилтийн кодыг `partB/src/` дотор байрлуулна.
+- Бүх тестийг `partB/tests/` дотор байрлуулна.
+- Source code-ийн class/function/variable нэрийг ойлгомжтой English identifier-аар бичнэ.
+- README, ADR, тайлан, session log зэрэг тайлбаруудыг Монгол хэлээр бичиж болно.
 
-## Coding Conventions
-- Prefer small, pure functions for filtering/search logic.
-- Validate input in public APIs.
-- Raise explicit exceptions for invalid task operations.
-- Avoid hidden side effects.
-- Keep date format as ISO (`YYYY-MM-DD`).
-- Keep priorities constrained to: `low`, `medium`, `high`.
+## Coding convention
+- Filtering/search логикт жижиг, ойлгомжтой function ашиглана.
+- Public API-д орж ирэх input-ыг validate хийнэ.
+- Буруу task operation үед тодорхой exception (`ValueError`, `KeyError`) өгнө.
+- Нууц side effect-ээс зайлсхийнэ.
+- Огнооны format: ISO (`YYYY-MM-DD`).
+- Priority зөвхөн `low`, `medium`, `high` байна.
 
-## Testing Conventions
-- Every new feature needs at least one direct unit test.
-- Include edge-case tests (invalid date, missing task, empty filters).
-- Keep tests deterministic and isolated.
+## Testing convention
+- Шинэ feature бүр дор хаяж нэг шууд unit test-тэй байна.
+- Edge case-үүдийг заавал шалгана: буруу date, байхгүй task, хоосон title, filter-ийн хослол.
+- Тестүүд deterministic, тусгаарлагдсан байна.
 
-## Security & Robustness Rules
-- Never execute user-provided strings as code.
-- Never use `eval`/`exec`.
-- Sanitize and validate all inputs before storing.
-- Do not trust AI-generated code blindly; verify behavior with tests.
-- Avoid leaking internal stack traces in user-facing CLI output.
+## Security ба robustness дүрэм
+- User input-ыг code болгон ажиллуулахгүй.
+- `eval`/`exec` огт ашиглахгүй.
+- Store хийхээс өмнө бүх input-ыг validate/sanitize хийнэ.
+- AI үүсгэсэн кодыг шууд итгэж авахгүй, тест ба review-ээр баталгаажуулна.
+- User-facing output дээр internal stack trace задруулахгүй.
 
-## No-Go Zones
-- Do not change assignment-required folder names or filenames.
-- Do not fabricate AI usage evidence; logs must reflect real sessions.
-- Do not claim manual authorship for AI-generated content.
-- Do not remove failing tests without replacement/fix rationale.
-- Do not add unrelated dependencies without a clear reason.
+## Хориглох зүйлс
+- Бие даалтын шаардсан folder/file нэрийг өөрчлөхгүй.
+- AI usage evidence зохиож бичихгүй; log нь бодит session-ы товч байх ёстой.
+- AI үүсгэсэн зүйлийг өөрөө гараар бичсэн гэж зарлахгүй.
+- Унаж байгаа тестийг үндэслэлгүй устгахгүй.
+- Шаардлагагүй dependency нэмэхгүй.
 
-## Git/Commit Guidance
-- Use Conventional Commits: `feat`, `fix`, `docs`, `test`, `refactor`, `chore`.
-- Keep commits small and focused.
-- For AI-assisted commits, include disclosure in commit body:
+## Git/Commit зөвлөмж
+- Conventional Commits ашиглана: `feat`, `fix`, `docs`, `test`, `refactor`, `chore`.
+- Commit бүр жижиг, нэг зорилготой байна.
+- AI-assisted commit бүрийн body-д disclosure оруулна:
   - `Co-Authored-By: Claude <noreply@anthropic.com>`
 
-## Slash Commands in this Repo
-- `/review`: security + robustness check (OWASP mindset)
-- `/test`: add/update tests for edge cases
-- `/docs`: update docstrings and README sections
-- `/commit`: propose conventional commit message
-- `/security`: identify top risk points and mitigations
+## Энэ repo дахь slash command-ууд
+- `/review`: security + robustness review (OWASP mindset)
+- `/test`: edge case-тэй test нэмэх/сайжруулах
+- `/docs`: docstring болон README хэсэг шинэчлэх
+- `/commit`: Conventional Commit message санал болгох
+- `/security`: гол эрсдэл ба mitigation тодорхойлох
 
-## Review Checklist Before Final Submission
-- Required files all present.
-- `python3 -m unittest ...` passes with >=10 tests.
-- AI session logs present in Part A and Part B.
-- Part C includes >=1500 words and required evidence sections.
+## Эцсийн шалгах жагсаалт
+- Шаардлагатай бүх файл байгаа.
+- `python3 -m unittest ...` ажиллуулахад 10+ test pass болсон.
+- Part A ба Part B-д AI session log байгаа.
+- Part C нь 1500+ үгтэй, шаардсан evidence хэсгүүдтэй.

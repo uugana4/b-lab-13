@@ -1,26 +1,26 @@
 # partA README (Draft)
 
-## Objective
-Define the project before coding:
-- scope and feature boundaries
-- architecture and data flow
-- stack decision with rationale
-- AI collaboration rules (`CLAUDE.md`)
+## Зорилго
+Код бичиж эхлэхээс өмнө төслийн үндсэн төлөвлөгөөг тодорхойлох:
+- scope болон feature boundary
+- архитектур ба data flow
+- stack сонголт, үндэслэл
+- AI-тай хамтран ажиллах дүрэм (`CLAUDE.md`)
 
-## Planned Build/Run/Test (for Part B)
-- Run tests:
+## Part B-д төлөвлөсөн build/run/test
+- Тест ажиллуулах:
   - `cd partB && python3 -m unittest discover -s tests -p "test_*.py" -v`
-- Run local script:
+- Local script ажиллуулах:
   - `cd partB && python3 src/task_tracker.py`
 
-## Planned Directory Map
-- `partB/src/` - source code
-- `partB/tests/` - unit tests
-- `partB/ai-sessions/` - build session summaries
+## Төлөвлөсөн directory map
+- `partB/src/` - эх код
+- `partB/tests/` - unit test-үүд
+- `partB/ai-sessions/` - build session-ы товч log-ууд
 
-## Planned Features
+## Төлөвлөсөн feature-үүд
 1. CRUD
-2. Due date + priority + labels
+2. Due date + priority + label
 3. Search/filter
-4. Mark complete
+4. Task complete болгох
 5. Deterministic listing/sorting

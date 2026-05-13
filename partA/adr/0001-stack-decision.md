@@ -1,37 +1,37 @@
-# ADR-0001: Choose Python Standard Library Stack
+# ADR-0001: Python Standard Library stack сонгох
 
-## Status
+## Төлөв
 Accepted
 
 ## Context
-Lab 13 requires:
-- 3+ working features
-- >=10 unit tests
-- strong documentation and AI-collaboration evidence
-- limited time (2 weeks)
+Lab 13 дараах зүйлсийг шаардсан:
+- 3+ working feature
+- 10-аас дээш unit test
+- documentation болон AI collaboration evidence
+- хязгаарлагдмал хугацаа (2 долоо хоног)
 
-We need a stack that enables fast iteration and reliable tests with minimal setup friction.
+Иймээс setup багатай, хурдан iteration хийх боломжтой, тест бичихэд найдвартай stack хэрэгтэй.
 
-## Options Considered
+## Харгалзан үзсэн сонголтууд
 1. Python + standard library (`unittest`)
 2. Node.js + Express + Jest
 3. Java + Spring Boot + JUnit
 
-## Decision
-Use **Python + standard library** for the Part B implementation.
+## Шийдвэр
+Part B implementation-д **Python + standard library** ашиглана.
 
-## Rationale
-- Lowest setup complexity and dependency overhead.
-- Fastest path to high-quality unit tests.
-- Keeps attention on assignment goals: workflow, verification, and reflection.
-- Easy for deterministic logic and edge-case coverage.
+## Үндэслэл
+- Setup complexity болон dependency overhead хамгийн бага.
+- Чанартай unit test бичих хамгийн хурдан зам.
+- Assignment-ийн гол зорилго болох workflow, verification, reflection дээр төвлөрөх боломж өгнө.
+- Deterministic logic болон edge-case coverage хийхэд ойлгомжтой.
 
-## Consequences
-### Positive
-- Rapid development and testing.
-- Lower risk of environment/dependency failures.
-- Cleaner audit trail for AI-assisted development.
+## Үр дагавар
+### Эерэг
+- Development болон testing хурдан.
+- Environment/dependency алдаа гарах эрсдэл бага.
+- AI-assisted development-ийн audit trail илүү цэвэр.
 
-### Negative
-- Not a full production web stack by default.
-- If API surface is needed later, additional tooling may be required.
+### Сөрөг
+- Default байдлаар бүрэн production web stack биш.
+- Дараа нь API surface хэрэгтэй бол нэмэлт tooling шаардагдана.

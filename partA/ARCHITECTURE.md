@@ -1,10 +1,11 @@
 # ARCHITECTURE.md
 
-## System Overview
-Personal Task Tracker is implemented as a modular Python application with clear separation:
-domain model, service logic, and tests.
+## Системийн тойм
+Personal Task Tracker нь Python дээр хэрэгжсэн жижиг modular application.
+Архитектур нь domain model, service logic, validation, search/filter logic, test гэсэн хэсгүүдийг
+ойлгомжтой ялгаж өгсөн.
 
-## Mermaid Diagram
+## Mermaid diagram
 ```mermaid
 flowchart TD
     userClient[UserOrCLI] --> taskService[TaskService]
@@ -17,22 +18,22 @@ flowchart TD
     testSuite --> queryEngine
 ```
 
-## Module Responsibilities
-- **TaskModel**: defines task structure (`id`, `title`, `description`, `due_date`, `priority`, `labels`, `status`).
-- **InputValidators**: validates due date, priority values, and update payloads.
-- **TaskStoreInMemory**: persistent state during runtime using in-memory dictionary/list.
-- **TaskService**: public operations (CRUD, mark complete, query by filters).
-- **SearchAndFilterEngine**: applies query, label, status, and priority filters deterministically.
-- **UnitTests**: verifies normal and edge-case behavior.
+## Module-уудын үүрэг
+- **TaskModel**: task-ийн бүтэц тодорхойлно (`id`, `title`, `description`, `due_date`, `priority`, `labels`, `status`).
+- **InputValidators**: due date, priority, update payload зэрэг input-ыг шалгана.
+- **TaskStoreInMemory**: runtime үед task-уудыг in-memory dictionary/list хэлбэрээр хадгална.
+- **TaskService**: public operation-уудыг гүйцэтгэнэ (CRUD, complete хийх, filter/search).
+- **SearchAndFilterEngine**: query, label, status, priority filter-үүдийг deterministic байдлаар хэрэглэнэ.
+- **UnitTests**: normal болон edge-case behavior-ийг баталгаажуулна.
 
-## Data Flow
-1. Client requests operation (create/update/list/search).
-2. Service validates input.
-3. Store is updated or queried.
-4. Optional filter engine narrows results.
-5. Response returned as serializable dictionary/list objects.
+## Data flow
+1. Client create/update/list/search operation дуудна.
+2. Service орж ирсэн input-ыг validate хийнэ.
+3. Store шинэчлэгдэнэ эсвэл query хийнэ.
+4. Filter engine шаардлагатай бол үр дүнг нарийсгана.
+5. Serializable dictionary/list object хэлбэрээр response буцаана.
 
-## Non-Functional Notes
-- Deterministic sorting by due date then id for stable outputs.
-- Errors are explicit and actionable (`ValueError`, `KeyError`).
-- No dynamic code execution and no untrusted input evaluation.
+## Non-functional тэмдэглэл
+- Stable output гаргахын тулд due date дараа нь id-аар deterministic sort хийнэ.
+- Алдаа тодорхой, засахад ойлгомжтой байна (`ValueError`, `KeyError`).
+- Dynamic code execution болон untrusted input evaluation ашиглахгүй.

@@ -1,15 +1,15 @@
-# Session 03 - Refactor and Test Expansion
+# Session 03 - Refactor ба test expansion
 
-## Objective
-Improve maintainability and complete unit-test threshold.
+## Зорилго
+Maintainability сайжруулах, unit-test threshold-ийг бүрэн хангах.
 
-## AI Assistance
-- Recommended helper functions for due date/priority/labels validation.
-- Proposed adding combined filter tests to reduce regression risk.
+## AI assistance
+- Due date/priority/label validation-д helper function ашиглахыг санал болгосон.
+- Regression risk бууруулахын тулд combined filter test нэмэхийг санал болгосон.
 
-## Human Decisions
-- Refactored with `_validate_due_date`, `_validate_priority`, `_normalize_labels`.
-- Added tests for label+priority filtering and sorted listing.
+## Хүний шийдвэр
+- `_validate_due_date`, `_validate_priority`, `_normalize_labels` helper-үүдээр refactor хийсэн.
+- Label+priority filtering болон sorted listing-д test нэмсэн.
 
-## Result
-- Cleaner code paths and >=10 passing unit tests.
+## Үр дүн
+- Code path цэвэршиж, 10-аас дээш unit test pass болсон.

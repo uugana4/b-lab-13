@@ -1,15 +1,15 @@
-# Session 01 - Feature Implementation Summary
+# Session 01 - Feature implementation summary
 
-## Objective
-Implement core Task Tracker features quickly with testability in mind.
+## Зорилго
+Task Tracker-ийн core feature-үүдийг test хийхэд хялбар байдлаар хурдан хэрэгжүүлэх.
 
-## AI Assistance
-- Proposed modular function split (validation, model, service methods).
-- Suggested deterministic list ordering by due date.
+## AI assistance
+- Validation, model, service method гэсэн modular function split санал болгосон.
+- Due date-аар deterministic list ordering хийхийг санал болгосон.
 
-## Human Decisions
-- Kept implementation in a single `task_tracker.py` module for assignment simplicity.
-- Selected explicit `ValueError`/`KeyError` strategy for predictable failures.
+## Хүний шийдвэр
+- Assignment-ийн simplicity-г хадгалахын тулд implementation-ийг нэг `task_tracker.py` module-д үлдээсэн.
+- Predictable failure гаргахын тулд `ValueError`/`KeyError` strategy сонгосон.
 
-## Result
-- CRUD + due date/priority/labels + completion/search shipped in working form.
+## Үр дүн
+- CRUD + due date/priority/label + completion/search feature-үүд ажиллах хэлбэрээр хэрэгжсэн.

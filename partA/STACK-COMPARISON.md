@@ -1,61 +1,62 @@
 # STACK-COMPARISON.md
 
-## Goal
-Compare 3 viable stacks and choose 1 for fast, testable implementation of a Personal Task Tracker.
+## Зорилго
+Personal Task Tracker төслийг богино хугацаанд, test хийхэд хялбар, ойлгомжтой байдлаар хэрэгжүүлэхийн тулд
+3 боломжит stack-ийг харьцуулж нэгийг сонгох.
 
-## Compared Stacks
+## Харьцуулсан stack-үүд
 
 ### Stack A: Python + Standard Library (`unittest`, in-memory model)
-**Pros**
-- Fast setup, no external dependency required
-- Very quick test authoring with built-in `unittest`
-- Great for demonstrating logic correctness in a course setting
+**Давуу тал**
+- Setup хурдан, external dependency шаардлагагүй
+- Built-in `unittest` ашиглан test хурдан бичих боломжтой
+- Logic correctness-ийг хичээлийн хүрээнд харуулахад тохиромжтой
 
-**Cons**
-- Minimal built-in API scaffolding compared to full frameworks
-- UI requires additional work if needed later
+**Сул тал**
+- Full framework-тэй харьцуулахад API scaffolding бага
+- UI хэрэгтэй бол дараа нь нэмэлт ажил шаардана
 
-**Fit**
-- Excellent for this assignment's focus on AI workflow, tests, and documentation.
+**Тохирох байдал**
+- AI workflow, test, documentation дээр төвлөрөх энэ бие даалтад хамгийн тохиромжтой.
 
 ---
 
 ### Stack B: Node.js + Express + Jest
-**Pros**
-- Familiar REST stack with rich ecosystem
-- Easy to extend into web frontend
+**Давуу тал**
+- REST API хөгжүүлэхэд түгээмэл, ecosystem өргөн
+- Дараа нь web frontend рүү өргөтгөхөд амар
 
-**Cons**
-- More setup overhead (package config, lint, test tooling)
-- Dependency management may consume time in a short assignment window
+**Сул тал**
+- Package config, lint, test tooling зэрэг setup арай их
+- Богино хугацаанд dependency management цаг авах эрсдэлтэй
 
-**Fit**
-- Good if API/demo deployment is the primary goal, but heavier than needed now.
+**Тохирох байдал**
+- API/demo deployment гол зорилго бол сайн сонголт, гэхдээ энэ ажлын scope-д арай хүнд.
 
 ---
 
 ### Stack C: Java + Spring Boot + JUnit
-**Pros**
-- Strong architecture patterns for larger systems
-- Mature test/story for enterprise-like services
+**Давуу тал**
+- Том системд тохирох хүчтэй architecture pattern-уудтай
+- Enterprise service болон testing ecosystem тогтвортой
 
-**Cons**
-- Highest setup and boilerplate overhead
-- Slower iteration for a small two-week assignment
+**Сул тал**
+- Setup болон boilerplate хамгийн их
+- Жижиг 2 долоо хоногийн бие даалтад iteration удаашрах магадлалтай
 
-**Fit**
-- Strong long-term stack, but overkill for this scope.
+**Тохирох байдал**
+- Урт хугацааны том төсөлд хүчтэй боловч энэ scope-д overkill.
 
-## Decision
-**Selected: Stack A (Python + Standard Library).**
+## Шийдвэр
+**Сонгосон stack: Stack A (Python + Standard Library).**
 
-## Why this Choice
-1. Minimizes setup friction and protects time for Part C reflection quality.
-2. Enables fast unit test iteration (>=10 tests requirement).
-3. Keeps the implementation transparent, making AI review and manual verification easier.
-4. Reduces dependency/security surface for a small project.
+## Сонгосон үндэслэл
+1. Setup friction багасгаж, Part C reflection-ийн чанарт цаг үлдээнэ.
+2. 10+ unit test шаардлагыг хурдан, найдвартай биелүүлэх боломжтой.
+3. Implementation ил тод тул AI review болон manual verification хийхэд хялбар.
+4. Жижиг төсөлд dependency/security surface багатай.
 
-## AI Planning Session Summary (Short)
-- AI suggested Node.js and Python as top options.
-- We prioritized reproducible tests and low setup overhead.
-- We selected Python to focus on correctness, documentation, and verifiable workflow.
+## AI planning session-ы товч
+- AI Node.js болон Python-ыг хамгийн боломжит сонголтууд гэж санал болгосон.
+- Бид reproducible test болон бага setup overhead-ийг илүү чухал гэж үзсэн.
+- Correctness, documentation, verifiable workflow дээр төвлөрөхийн тулд Python-ыг сонгосон.

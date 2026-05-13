@@ -1,15 +1,15 @@
 # /security
 
-Run a focused OWASP Top 10 style assessment on the relevant codebase.
+Холбогдох codebase дээр OWASP Top 10 style security assessment хийнэ.
 
 Check:
-- Input validation and unsafe parsing
+- Input validation болон unsafe parsing
 - Sensitive data exposure
-- Broken access assumptions
-- Unsafe dependency/use of dangerous APIs
-- Logging of sensitive content
+- Broken access assumption
+- Unsafe dependency эсвэл dangerous API usage
+- Sensitive content log хийж байгаа эсэх
 
 Deliver:
-- Top risks with severity and rationale
-- Quick mitigations
-- Suggested tests to prevent regression
+- Severity ба rationale бүхий гол risk-үүд
+- Түргэн mitigation
+- Regression-ээс сэргийлэх suggested test-үүд
