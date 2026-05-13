@@ -1,0 +1,6 @@
+Ажиллуулах команд:
+cd "/Users/macbook/Desktop/b lab 13/bie-daalt-13/partB"
+python3 src/task_tracker.py
+Тест ажиллуулах команд:
+cd "/Users/macbook/Desktop/b lab 13/bie-daalt-13/partB"
+python3 -m unittest discover -s tests -p "test_*.py" -v
