@@ -1,4 +1,5 @@
-# bie-daalt-13
+# lab 13
+
 
 F.CSM311 хичээлийн "Бие даалт 13: AI-Assisted Software Construction" ажлын repository.
 
