@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+
+# OS/editor
+.DS_Store
+.vscode/
+
+# Build artifacts
+dist/
+build/
